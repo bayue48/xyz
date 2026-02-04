@@ -90,6 +90,7 @@ func TestListTransactionsFailed(t *testing.T) {
 }
 
 func TestTransaction_LimitExceeded(t *testing.T) {
+
 	mockLimit := &entity.CustomerLimit{
 		LimitAmount: 100000,
 		UsedAmount:  90000,
