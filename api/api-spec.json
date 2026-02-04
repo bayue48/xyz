@@ -1,0 +1,796 @@
+{
+  "v": 11,
+  "name": "XYZ",
+  "folders": [],
+  "requests": [
+    {
+      "v": "17",
+      "name": "Register",
+      "method": "POST",
+      "endpoint": "http://127.0.0.1:3000/api/v1/users",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": "application/json",
+        "body": "{\n  \"nik\": \"3525015201880001\",\n  \"full_name\": \"sample string\",\n  \"legal_name\": \"sample string\",\n  \"birth_place\": \"sample string\",\n  \"birth_date\": \"2006-01-02\",\n  \"salary\": 72322,\n  \"ktp_photo\": \"sample string\",\n  \"selfie_photo\": \"sample string\"\n}"
+      },
+      "requestVariables": [],
+      "responses": {
+        "Success": {
+          "name": "Success",
+          "originalRequest": {
+            "v": "6",
+            "name": "Register",
+            "method": "POST",
+            "endpoint": "http://127.0.0.1:3000/api/v1/users",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"nik\": \"3525015201880000\",\n  \"full_name\": \"sample string\",\n  \"legal_name\": \"sample string\",\n  \"birth_place\": \"sample string\",\n  \"birth_date\": \"2006-01-02\",\n  \"salary\": 72322,\n  \"ktp_photo\": \"sample string\",\n  \"selfie_photo\": \"sample string\"\n}"
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "Created",
+          "code": 201,
+          "headers": [
+            {
+              "key": "content-length",
+              "value": "34"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Feb 2026 16:10:46 GMT"
+            },
+            {
+              "key": "x-ratelimit-limit",
+              "value": "20"
+            },
+            {
+              "key": "x-ratelimit-remaining",
+              "value": "17"
+            },
+            {
+              "key": "x-ratelimit-reset",
+              "value": "49"
+            }
+          ],
+          "body": "{\"status\":201,\"message\":\"Created\"}"
+        },
+        "Conflict": {
+          "name": "Conflict",
+          "originalRequest": {
+            "v": "6",
+            "name": "Register",
+            "method": "POST",
+            "endpoint": "http://127.0.0.1:3000/api/v1/users",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"nik\": \"3525015201880001\",\n  \"full_name\": \"sample string\",\n  \"legal_name\": \"sample string\",\n  \"birth_place\": \"sample string\",\n  \"birth_date\": \"2006-01-02\",\n  \"salary\": 72322,\n  \"ktp_photo\": \"sample string\",\n  \"selfie_photo\": \"sample string\"\n}"
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "Conflict",
+          "code": 409,
+          "headers": [
+            {
+              "key": "content-length",
+              "value": "54"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Feb 2026 16:11:21 GMT"
+            },
+            {
+              "key": "x-ratelimit-limit",
+              "value": "20"
+            },
+            {
+              "key": "x-ratelimit-remaining",
+              "value": "16"
+            },
+            {
+              "key": "x-ratelimit-reset",
+              "value": "14"
+            }
+          ],
+          "body": "{\"status\":409,\"message\":\"Conflict\",\"error\":\"Conflict\"}"
+        }
+      },
+      "description": null
+    },
+    {
+      "v": "17",
+      "name": "Login",
+      "method": "POST",
+      "endpoint": "http://127.0.0.1:3000/api/v1/users/_login",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "body": {
+        "contentType": "application/json",
+        "body": "{\n  \"nik\": \"31750202020200001\"\n}"
+      },
+      "requestVariables": [],
+      "responses": {
+        "Success": {
+          "name": "Success",
+          "originalRequest": {
+            "v": "6",
+            "name": "Login",
+            "method": "POST",
+            "endpoint": "http://127.0.0.1:3000/api/v1/users/_login",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"nik\": \"3175020202020002\"\n}"
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "content-length",
+              "value": "99"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Feb 2026 16:11:42 GMT"
+            },
+            {
+              "key": "x-ratelimit-limit",
+              "value": "20"
+            },
+            {
+              "key": "x-ratelimit-remaining",
+              "value": "19"
+            },
+            {
+              "key": "x-ratelimit-reset",
+              "value": "60"
+            }
+          ],
+          "body": "{\"status\":200,\"message\":\"Login successful\",\"data\":{\"token\":\"6160e120-f168-459a-bf74-c68203cd0aa1\"}}"
+        },
+        "Failed": {
+          "name": "Failed",
+          "originalRequest": {
+            "v": "6",
+            "name": "Login",
+            "method": "POST",
+            "endpoint": "http://127.0.0.1:3000/api/v1/users/_login",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"nik\": \"31750202020200001\"\n}"
+            },
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "headers": [
+            {
+              "key": "content-length",
+              "value": "38"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Feb 2026 16:11:57 GMT"
+            },
+            {
+              "key": "x-ratelimit-limit",
+              "value": "20"
+            },
+            {
+              "key": "x-ratelimit-remaining",
+              "value": "18"
+            },
+            {
+              "key": "x-ratelimit-reset",
+              "value": "44"
+            }
+          ],
+          "body": "{\"status\":400,\"message\":\"Bad Request\"}"
+        }
+      },
+      "description": null
+    },
+    {
+      "v": "17",
+      "name": "Profile",
+      "method": "GET",
+      "endpoint": "http://127.0.0.1:3000/api/v1/users/_profile",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "bearer",
+        "token": "6160e120-f168-459a-bf74-c68203cd0aa1",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "Unauthorized": {
+          "name": "Unauthorized",
+          "originalRequest": {
+            "v": "6",
+            "name": "Profile",
+            "method": "GET",
+            "endpoint": "http://127.0.0.1:3000/api/v1/users/_profile",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "bearer",
+              "token": "e7fb4ba4-ed25-4652-87aa-43f0fa15de6d",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "headers": [
+            {
+              "key": "content-length",
+              "value": "25"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Feb 2026 16:12:09 GMT"
+            },
+            {
+              "key": "x-ratelimit-limit",
+              "value": "20"
+            },
+            {
+              "key": "x-ratelimit-remaining",
+              "value": "17"
+            },
+            {
+              "key": "x-ratelimit-reset",
+              "value": "32"
+            }
+          ],
+          "body": "{\"errors\":\"Unauthorized\"}"
+        },
+        "Success": {
+          "name": "Success",
+          "originalRequest": {
+            "v": "6",
+            "name": "Profile",
+            "method": "GET",
+            "endpoint": "http://127.0.0.1:3000/api/v1/users/_profile",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "bearer",
+              "token": "6160e120-f168-459a-bf74-c68203cd0aa1",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "content-length",
+              "value": "382"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Feb 2026 16:12:41 GMT"
+            },
+            {
+              "key": "x-ratelimit-limit",
+              "value": "20"
+            },
+            {
+              "key": "x-ratelimit-remaining",
+              "value": "16"
+            },
+            {
+              "key": "x-ratelimit-reset",
+              "value": "1"
+            }
+          ],
+          "body": "{\"status\":200,\"message\":\"Profile retrieved successfully\",\"data\":{\"id\":2,\"nik\":\"3175020202020002\",\"full_name\":\"Annisa Putri\",\"legal_name\":\"Annisa Putri\",\"birth_place\":\"Bandung\",\"birth_date\":\"1992-01-29T00:00:00+07:00\",\"salary\":15000000,\"ktp_photo\":\"ktp_annisa.jpg\",\"selfie_photo\":\"selfie_annisa.jpg\",\"created_at\":\"2026-02-01T07:03:30+07:00\",\"updated_at\":\"2026-02-01T07:03:30+07:00\"}}"
+        }
+      },
+      "description": null
+    },
+    {
+      "v": "17",
+      "name": "Logout",
+      "method": "POST",
+      "endpoint": "http://127.0.0.1:3000/api/v1/users/_logout",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "bearer",
+        "token": "6160e120-f168-459a-bf74-c68203cd0aa1",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "Unauthorized": {
+          "name": "Unauthorized",
+          "originalRequest": {
+            "v": "6",
+            "name": "Logout",
+            "method": "POST",
+            "endpoint": "http://127.0.0.1:3000/api/v1/users/_logout",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "bearer",
+              "token": "e7fb4ba4-ed25-4652-87aa-43f0fa15de6d",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "headers": [
+            {
+              "key": "content-length",
+              "value": "25"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Feb 2026 16:12:50 GMT"
+            },
+            {
+              "key": "x-ratelimit-limit",
+              "value": "20"
+            },
+            {
+              "key": "x-ratelimit-remaining",
+              "value": "19"
+            },
+            {
+              "key": "x-ratelimit-reset",
+              "value": "60"
+            }
+          ],
+          "body": "{\"errors\":\"Unauthorized\"}"
+        },
+        "Success": {
+          "name": "Success",
+          "originalRequest": {
+            "v": "6",
+            "name": "Logout",
+            "method": "POST",
+            "endpoint": "http://127.0.0.1:3000/api/v1/users/_logout",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "bearer",
+              "token": "6160e120-f168-459a-bf74-c68203cd0aa1",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "content-length",
+              "value": "44"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Feb 2026 16:13:08 GMT"
+            },
+            {
+              "key": "x-ratelimit-limit",
+              "value": "20"
+            },
+            {
+              "key": "x-ratelimit-remaining",
+              "value": "18"
+            },
+            {
+              "key": "x-ratelimit-reset",
+              "value": "43"
+            }
+          ],
+          "body": "{\"status\":200,\"message\":\"Logout successful\"}"
+        }
+      },
+      "description": null
+    },
+    {
+      "v": "17",
+      "name": "Create Trx",
+      "method": "POST",
+      "endpoint": "http://127.0.0.1:3000/api/v1/transactions",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "bearer",
+        "token": "12ebfe2e-5567-40dd-bcf5-3dae3c343ebf",
+        "authActive": true
+      },
+      "body": {
+        "contentType": "application/json",
+        "body": "{\n  \"contract_number\": \"TRA-01\",\n  \"otr\": 35553,\n  \"admin_fee\": 1000,\n  \"installment_amount\": 1,\n  \"interest_amount\": 1,\n  \"asset_name\": \"sample string\",\n  \"tenor_month\": 1\n}"
+      },
+      "requestVariables": [],
+      "responses": {
+        "Unauthorized": {
+          "name": "Unauthorized",
+          "originalRequest": {
+            "v": "6",
+            "name": "Create Trx",
+            "method": "POST",
+            "endpoint": "http://127.0.0.1:3000/api/v1/transactions",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"contract_number\": \"TRA-01\",\n  \"otr\": 35553,\n  \"admin_fee\": 1000,\n  \"installment_amount\": 1,\n  \"interest_amount\": 1,\n  \"asset_name\": \"sample string\",\n  \"tenor_month\": 1\n}"
+            },
+            "auth": {
+              "authType": "bearer",
+              "token": "b2e0a063-5dca-465c-8289-59cc4ff94234",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "headers": [
+            {
+              "key": "content-length",
+              "value": "25"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Feb 2026 16:14:04 GMT"
+            },
+            {
+              "key": "x-ratelimit-limit",
+              "value": "20"
+            },
+            {
+              "key": "x-ratelimit-remaining",
+              "value": "18"
+            },
+            {
+              "key": "x-ratelimit-reset",
+              "value": "51"
+            }
+          ],
+          "body": "{\"errors\":\"Unauthorized\"}"
+        },
+        "Failed": {
+          "name": "Failed",
+          "originalRequest": {
+            "v": "6",
+            "name": "Create Trx",
+            "method": "POST",
+            "endpoint": "http://127.0.0.1:3000/api/v1/transactions",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"contract_number\": \"TRA-01\",\n  \"otr\": 35553,\n  \"admin_fee\": 1000,\n  \"installment_amount\": 1,\n  \"interest_amount\": 1,\n  \"asset_name\": \"sample string\",\n  \"tenor_month\": 1\n}"
+            },
+            "auth": {
+              "authType": "bearer",
+              "token": "d60d6ece-db35-4a65-9112-fce9c5cdd8a6",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "headers": [
+            {
+              "key": "content-length",
+              "value": "74"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Feb 2026 16:14:34 GMT"
+            },
+            {
+              "key": "x-ratelimit-limit",
+              "value": "20"
+            },
+            {
+              "key": "x-ratelimit-remaining",
+              "value": "16"
+            },
+            {
+              "key": "x-ratelimit-reset",
+              "value": "21"
+            }
+          ],
+          "body": "{\"status\":400,\"message\":\"Bad Request\",\"error\":\"customer don't have limit\"}"
+        },
+        "Success": {
+          "name": "Success",
+          "originalRequest": {
+            "v": "6",
+            "name": "Create Trx",
+            "method": "POST",
+            "endpoint": "http://127.0.0.1:3000/api/v1/transactions",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"contract_number\": \"TRA-01\",\n  \"otr\": 35553,\n  \"admin_fee\": 1000,\n  \"installment_amount\": 1,\n  \"interest_amount\": 1,\n  \"asset_name\": \"sample string\",\n  \"tenor_month\": 1\n}"
+            },
+            "auth": {
+              "authType": "bearer",
+              "token": "12ebfe2e-5567-40dd-bcf5-3dae3c343ebf",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "Created",
+          "code": 201,
+          "headers": [
+            {
+              "key": "content-length",
+              "value": "59"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Feb 2026 16:16:09 GMT"
+            },
+            {
+              "key": "x-ratelimit-limit",
+              "value": "20"
+            },
+            {
+              "key": "x-ratelimit-remaining",
+              "value": "16"
+            },
+            {
+              "key": "x-ratelimit-reset",
+              "value": "12"
+            }
+          ],
+          "body": "{\"status\":201,\"message\":\"Transaction created successfully\"}"
+        }
+      },
+      "description": null
+    },
+    {
+      "v": "17",
+      "name": "List Trx",
+      "method": "GET",
+      "endpoint": "http://127.0.0.1:3000/api/v1/transactions",
+      "params": [],
+      "headers": [],
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authType": "bearer",
+        "token": "12ebfe2e-5567-40dd-bcf5-3dae3c343ebf",
+        "authActive": true
+      },
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {
+        "Unauthorized": {
+          "name": "Unauthorized",
+          "originalRequest": {
+            "v": "6",
+            "name": "List Trx",
+            "method": "GET",
+            "endpoint": "http://127.0.0.1:3000/api/v1/transactions",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "bearer",
+              "token": "b2e0a063-5dca-465c-8289-59cc4ff94234",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "headers": [
+            {
+              "key": "content-length",
+              "value": "25"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Feb 2026 16:14:15 GMT"
+            },
+            {
+              "key": "x-ratelimit-limit",
+              "value": "20"
+            },
+            {
+              "key": "x-ratelimit-remaining",
+              "value": "17"
+            },
+            {
+              "key": "x-ratelimit-reset",
+              "value": "40"
+            }
+          ],
+          "body": "{\"errors\":\"Unauthorized\"}"
+        },
+        "Success": {
+          "name": "Success",
+          "originalRequest": {
+            "v": "6",
+            "name": "List Trx",
+            "method": "GET",
+            "endpoint": "http://127.0.0.1:3000/api/v1/transactions",
+            "headers": [],
+            "params": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "bearer",
+              "token": "12ebfe2e-5567-40dd-bcf5-3dae3c343ebf",
+              "authActive": true
+            },
+            "requestVariables": []
+          },
+          "status": "OK",
+          "code": 200,
+          "headers": [
+            {
+              "key": "content-length",
+              "value": "282"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Feb 2026 16:16:23 GMT"
+            },
+            {
+              "key": "x-ratelimit-limit",
+              "value": "20"
+            },
+            {
+              "key": "x-ratelimit-remaining",
+              "value": "19"
+            },
+            {
+              "key": "x-ratelimit-reset",
+              "value": "60"
+            }
+          ],
+          "body": "{\"status\":200,\"message\":\"Transactions retrieved successfully\",\"data\":[{\"id\":27,\"contract_number\":\"TRA-01\",\"customer_id\":1,\"otr\":35553,\"admin_fee\":1000,\"installment_amount\":1,\"interest_amount\":1,\"asset_name\":\"sample string\",\"tenor_month\":1,\"created_at\":\"2026-02-04T16:16:04+07:00\"}]}"
+        }
+      },
+      "description": null
+    }
+  ],
+  "auth": {
+    "authType": "none",
+    "authActive": true
+  },
+  "headers": [],
+  "variables": [],
+  "description": ""
+}
